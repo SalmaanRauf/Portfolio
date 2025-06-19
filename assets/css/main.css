@@ -2134,9 +2134,14 @@ p {
 
 .skills-visualization {
     position: relative;
+    width: 100%;
+    height: 45vh; /* Reduced to remove half the blank space */
+    min-height: 400px; /* Reduced proportionally */
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    overflow: visible;
 }
 
 .skills-canvas {
@@ -2873,7 +2878,8 @@ p {
 /* Skills Matrix Styles */
 .skills-content {
     position: relative;
-    padding: 2rem 0 4rem;
+    /* Adjusted bottom padding to create consistent spacing with other sections. */
+    padding: 11rem 0 2rem;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -2881,8 +2887,9 @@ p {
 .skills-visualization {
     position: relative;
     width: 100%;
-    height: 100vh; /* Changed from 80vh */
-    min-height: 900px; /* Increased from 800px */
+    /* REMOVED fixed height and min-height properties. 
+      This allows the container to shrink to fit its content, eliminating the unwanted blank space.
+    */
     display: flex;
     justify-content: center;
     align-items: center; /* Changed from flex-start */
@@ -2942,13 +2949,13 @@ p {
 }
 
 .skill-group[data-skill="cloud"] {
-    bottom: 20%;
+    bottom: 18%;
     right: 15%;
     transform: translateX(0);
 }
 
 .skill-group[data-skill="frameworks"] {
-    bottom: 20%;
+    bottom: 18%;
     left: 15%;
     transform: translateX(0);
 }
@@ -3021,4 +3028,8 @@ p {
     transform: translateY(-5px);
     border-color: rgba(0, 229, 255, 0.5);
     box-shadow: 0 0 40px rgba(0, 229, 255, 0.15);
+}
+
+.section-header {
+    margin-bottom: 2rem; /* Reduced from var(--space-2xl) to control spacing after title */
 }
