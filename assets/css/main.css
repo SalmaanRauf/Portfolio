@@ -75,7 +75,7 @@ p { margin-bottom: 1rem; font-size: 1.1rem; color: var(--text-low-emphasis); }
 .nav-container {
     height: 100%;
     display: flex;
-    justify-content: flex-end; /* Aligns links to the right */
+    justify-content: center; /* Aligns links to the right */
     align-items: center;
     max-width: var(--container-width);
     margin: 0 auto;
