@@ -244,6 +244,11 @@ p { margin-bottom: 1rem; font-size: 1.1rem; color: var(--text-low-emphasis); }
     scroll-margin-top: var(--nav-height);
 }
 
+/* Added to reduce top padding specifically for the skills section */
+#skills {
+    padding-top: 50px;
+}
+
 .section-header {
     text-align: center;
     margin-bottom: 4rem;
@@ -316,13 +321,14 @@ p { margin-bottom: 1rem; font-size: 1.1rem; color: var(--text-low-emphasis); }
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 500px;
+    min-height: 650px; /* Height to contain the pentagon */
+    margin-top: 4rem;
 }
 
 .skills-circle {
     position: relative;
-    width: 600px;
-    height: 600px;
+    width: 650px;  /* Boundary for the circular arrangement */
+    height: 650px;
 }
 
 .skills-background {
@@ -339,7 +345,7 @@ p { margin-bottom: 1rem; font-size: 1.1rem; color: var(--text-low-emphasis); }
 
 .skill-group {
     position: absolute;
-    width: 220px;
+    width: 220px; /* Shrunk the boxes */
     padding: 1.5rem;
     background: var(--card-bg);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -347,6 +353,7 @@ p { margin-bottom: 1rem; font-size: 1.1rem; color: var(--text-low-emphasis); }
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
 }
+
 .skill-group:hover {
     transform: translateY(-5px) scale(1.05);
     border-color: var(--accent-a);
@@ -357,18 +364,45 @@ p { margin-bottom: 1rem; font-size: 1.1rem; color: var(--text-low-emphasis); }
     margin-bottom: 1rem;
     font-size: 1.25rem;
 }
+
 .skill-group p {
     font-size: 0.9rem;
     opacity: 0.8;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0; /* Removed bottom margin to tighten text */
     line-height: 1.5;
 }
 
-.skill-group[data-skill="ai-ml"] { top: 0; left: 50%; transform: translateX(-50%); }
-.skill-group[data-skill="languages"] { top: 35%; right: 0; }
-.skill-group[data-skill="cloud"] { bottom: 0; right: 20%; }
-.skill-group[data-skill="frameworks"] { bottom: 0; left: 20%; }
-.skill-group[data-skill="tools"] { top: 35%; left: 0; }
+/* --- Pentagon Positioning --- */
+/* Top Point */
+.skill-group[data-skill="ai-ml"] {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Top Right */
+.skill-group[data-skill="languages"] {
+    top: 25%;
+    right: 0;
+}
+
+/* Bottom Right */
+.skill-group[data-skill="cloud"] {
+    bottom: 5%;
+    right: 15%;
+}
+
+/* Bottom Left */
+.skill-group[data-skill="frameworks"] {
+    bottom: 5%;
+    left: 15%;
+}
+
+/* Top Left */
+.skill-group[data-skill="tools"] {
+    top: 25%;
+    left: 0;
+}
 
 /* ===== EXPERIENCE TIMELINE ===== */
 .timeline {
@@ -625,19 +659,25 @@ p { margin-bottom: 1rem; font-size: 1.1rem; color: var(--text-low-emphasis); }
         max-width: 300px;
         margin: 0 auto;
     }
+    .skills-visualization {
+        min-height: auto;
+        margin-top: 2rem;
+    }
     .skills-circle {
+        position: static;
         width: 100%;
         height: auto;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         gap: 1.5rem;
-        position: static;
     }
+    
     .skill-group {
         position: static;
         transform: none !important;
         width: 100%;
     }
+    
     .skills-background {
         display: none;
     }
