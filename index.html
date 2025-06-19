@@ -176,53 +176,38 @@
             </div>
             <div class="skills-content">
                 <div class="skills-toggle">
-                    <button class="toggle-btn active" data-view="tech">Tech Stack</button>
-                    <button class="toggle-btn" data-view="soft">Soft Skills</button>
+                    <button class="toggle-btn active" data-view="tech">TECH STACK</button>
+                    <button class="toggle-btn" data-view="soft">SOFT SKILLS</button>
                 </div>
                 <div class="skills-visualization">
-                    <canvas id="skillsCanvas" class="skills-canvas"></canvas>
-                    <div class="skills-legend">
-                        <div class="skill-item" data-skill="ai-ml">
-                            <div class="skill-dot"></div>
-                            <span>AI/ML</span>
-                            <div class="skill-details">
-                                <span>OpenAI, Azure AI, LangChain</span>
-                                <span>TensorFlow, RAG, NLP</span>
-                            </div>
+                    <div class="skills-circle">
+                        <div class="skill-group" data-skill="ai-ml">
+                            <h4>AI/ML</h4>
+                            <p>OpenAI, Azure AI, LangChain</p>
+                            <p>TensorFlow, RAG, NLP</p>
                         </div>
-                        <div class="skill-item" data-skill="languages">
-                            <div class="skill-dot"></div>
-                            <span>Languages</span>
-                            <div class="skill-details">
-                                <span>Python, TypeScript, JavaScript</span>
-                                <span>C++, Java, SQL</span>
-                            </div>
+                        <div class="skill-group" data-skill="languages">
+                            <h4>Languages</h4>
+                            <p>Python, TypeScript, JavaScript</p>
+                            <p>C++, Java, SQL</p>
                         </div>
-                        <div class="skill-item" data-skill="frameworks">
-                            <div class="skill-dot"></div>
-                            <span>Frameworks</span>
-                            <div class="skill-details">
-                                <span>React, Next.js, Node.js</span>
-                                <span>Material-UI, Vercel, Stripe</span>
-                            </div>
+                        <div class="skill-group" data-skill="frameworks">
+                            <h4>Frameworks</h4>
+                            <p>React, Next.js, Node.js</p>
+                            <p>Material-UI, Vercel, Stripe</p>
                         </div>
-                        <div class="skill-item" data-skill="cloud">
-                            <div class="skill-dot"></div>
-                            <span>Cloud & DB</span>
-                            <div class="skill-details">
-                                <span>AWS, Firebase, Pinecone</span>
-                                <span>Azure, MongoDB, PostgreSQL</span>
-                            </div>
+                        <div class="skill-group" data-skill="cloud">
+                            <h4>Cloud & DB</h4>
+                            <p>AWS, Firebase, Pinecone</p>
+                            <p>Azure, MongoDB, PostgreSQL</p>
                         </div>
-                        <div class="skill-item" data-skill="tools">
-                            <div class="skill-dot"></div>
-                            <span>Tools & DevOps</span>
-                            <div class="skill-details">
-                                <span>Git, Docker, CI/CD</span>
-                                <span>Agile, Jira, Linux</span>
-                            </div>
+                        <div class="skill-group" data-skill="tools">
+                            <h4>Tools & DevOps</h4>
+                            <p>Git, Docker, CI/CD</p>
+                            <p>Agile, Jira, Linux</p>
                         </div>
                     </div>
+                    <div class="skills-background"></div>
                 </div>
             </div>
         </div>
