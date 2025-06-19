@@ -394,13 +394,13 @@ p { margin-bottom: 1rem; font-size: 1.1rem; color: var(--text-low-emphasis); }
 
 /* Bottom Left */
 .skill-group[data-skill="frameworks"] {
-    bottom: 5%;
+    bottom: 15%;
     left: 15%;
 }
 
 /* Top Left */
 .skill-group[data-skill="tools"] {
-    top: 25%;
+    top: 15%;
     left: 0;
 }
 
