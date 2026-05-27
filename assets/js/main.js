@@ -6,6 +6,9 @@
     const navLinks = Array.from(document.querySelectorAll(".site-menu a"));
     const revealItems = Array.from(document.querySelectorAll("[data-reveal]"));
     const sections = Array.from(document.querySelectorAll("main section[id]"));
+    const resumeDialog = document.querySelector("[data-resume-dialog]");
+    const resumeOpenButtons = Array.from(document.querySelectorAll("[data-resume-open]"));
+    const resumeCloseButton = document.querySelector("[data-resume-close]");
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     const closeMenu = () => {
@@ -29,6 +32,36 @@
         document.addEventListener("keydown", (event) => {
             if (event.key === "Escape") {
                 closeMenu();
+            }
+        });
+    }
+
+    if (resumeDialog && resumeOpenButtons.length > 0) {
+        const openResume = () => {
+            closeMenu();
+            if (typeof resumeDialog.showModal === "function") {
+                resumeDialog.showModal();
+                resumeCloseButton?.focus();
+            } else {
+                window.open("files/Salmaan Rauf Resume.pdf", "_blank", "noreferrer");
+            }
+        };
+
+        const closeResume = () => {
+            if (resumeDialog.open) {
+                resumeDialog.close();
+            }
+        };
+
+        resumeOpenButtons.forEach((button) => {
+            button.addEventListener("click", openResume);
+        });
+
+        resumeCloseButton?.addEventListener("click", closeResume);
+
+        resumeDialog.addEventListener("click", (event) => {
+            if (event.target === resumeDialog) {
+                closeResume();
             }
         });
     }

@@ -18,9 +18,9 @@ Durable visual rules live in `DESIGN.md`.
 index.html              Main page
 DESIGN.md               Accepted visual direction and drift rules
 assets/css/main.css     Site design system and responsive layout
-assets/js/main.js       Menu, reveal, active nav, scroll progress
+assets/js/main.js       Menu, reveal, active nav, scroll progress, resume modal
 images/                 Profile and project assets
-files/                  Resume PDF and HTML source
+files/                  Resume PDF
 robots.txt              Search crawler hints
 sitemap.xml             Sitemap for salmaanrauf.dev
 ```

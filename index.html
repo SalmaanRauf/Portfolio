@@ -92,7 +92,7 @@
                 </p>
                 <div class="button-row" aria-label="Primary actions">
                     <a class="button button-primary" href="#projects">View work</a>
-                    <a class="button button-secondary" href="files/Salmaan Rauf Resume.pdf" download>Resume</a>
+                    <button class="button button-secondary" type="button" data-resume-open>Resume</button>
                 </div>
             </div>
 
@@ -381,7 +381,7 @@ validation -> reviewable result</code></pre>
                     </p>
                     <div class="button-row">
                         <a class="button button-primary" href="mailto:raufsalmaan1@gmail.com">Start a conversation</a>
-                        <a class="button button-secondary" href="files/Salmaan Rauf Resume.pdf" download>Download resume</a>
+                        <button class="button button-secondary" type="button" data-resume-open>View resume</button>
                     </div>
                 </div>
 
@@ -408,6 +408,27 @@ validation -> reviewable result</code></pre>
             </div>
         </section>
     </main>
+
+    <dialog class="resume-dialog" aria-labelledby="resume-dialog-title" data-resume-dialog>
+        <div class="resume-dialog-panel">
+            <header class="resume-dialog-header">
+                <div>
+                    <p class="eyebrow">Resume</p>
+                    <h2 id="resume-dialog-title">Salmaan Rauf resume</h2>
+                </div>
+                <button class="resume-close" type="button" aria-label="Close resume" data-resume-close>
+                    <span aria-hidden="true">x</span>
+                </button>
+            </header>
+            <div class="resume-frame">
+                <iframe src="files/Salmaan%20Rauf%20Resume.pdf#toolbar=1&view=FitH" title="Salmaan Rauf resume PDF"></iframe>
+            </div>
+            <footer class="resume-dialog-actions">
+                <a class="button button-primary" href="files/Salmaan Rauf Resume.pdf" download>Download PDF</a>
+                <a class="button button-secondary" href="files/Salmaan Rauf Resume.pdf" target="_blank" rel="noreferrer">Open in tab</a>
+            </footer>
+        </div>
+    </dialog>
 
     <footer class="site-footer">
         <p>&copy; 2026 Salmaan Rauf. Plain HTML/CSS, last revised May 2026.</p>
