@@ -250,7 +250,6 @@ button {
 }
 
 .hero-rail,
-.section-marker,
 .eyebrow,
 .card-index,
 .tag-list,
@@ -480,29 +479,6 @@ p {
 .focus-strip p {
     margin-bottom: 0;
     font-size: 0.95rem;
-}
-
-.section-marker {
-    display: inline-grid;
-    grid-template-columns: auto auto;
-    gap: 0.65rem;
-    align-items: center;
-    width: max-content;
-    margin-bottom: 1rem;
-    color: var(--muted);
-    font-size: 0.76rem;
-    text-transform: uppercase;
-}
-
-.section-marker span:first-child {
-    min-width: 2rem;
-    color: var(--paper-bright);
-    background: var(--accent);
-    text-align: center;
-}
-
-.section-marker-inline {
-    margin-bottom: 1.25rem;
 }
 
 .section-heading {
@@ -1023,17 +999,10 @@ p {
     }
 
     .profile-section {
-        grid-template-columns: 4.5rem minmax(18rem, 0.75fr) minmax(0, 1fr);
+        grid-template-columns: minmax(18rem, 0.75fr) minmax(0, 1fr);
         grid-template-areas:
-            "marker heading copy";
+            "heading copy";
         column-gap: 2rem;
-    }
-
-    .profile-section > .section-marker {
-        grid-area: marker;
-        writing-mode: vertical-rl;
-        transform: rotate(180deg);
-        margin-bottom: 0;
     }
 
     .profile-section > .section-heading {
@@ -1204,9 +1173,7 @@ p {
         font-size: 2.1rem;
     }
 
-    .eyebrow,
-    .section-marker,
-    .section-marker-inline {
+    .eyebrow {
         margin-bottom: 0.55rem;
     }
 
