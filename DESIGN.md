@@ -28,6 +28,7 @@ Reference comps are stored outside the repo at:
 - Keep corners square. Do not introduce pill cards, glass panels, neon glow, soft blue/purple gradients, or card-inside-card stacking.
 - Color is scarce. Vermilion is the only accent and should mark section IDs, active states, and primary signal.
 - Images should be real or generated project-specific artifacts, desaturated, high contrast, and framed with crop-mark treatment.
+- Do not put a personal portrait in the hero/profile area. Use systems panels, product artifacts, or project screenshots instead.
 - Experience should read as a ledger/table, not a decorative timeline.
 - Project cards should use the Swiss reference crops in `images/project-*-swiss.jpg` unless a stronger product screenshot replaces them.
 - Project cards should present product artifacts and concrete jobs, not generic feature blurbs.

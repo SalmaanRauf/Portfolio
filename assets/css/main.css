@@ -260,7 +260,8 @@ button {
 .fact-table dt,
 .metrics-strip span,
 .contact-index span,
-.hero-portrait figcaption {
+.hero-systems,
+.systems-list {
     font-family: var(--font-mono);
 }
 
@@ -385,60 +386,67 @@ p {
     background: var(--paper-muted);
 }
 
-.hero-portrait {
-    position: relative;
-    margin: 0;
-    border: 1px solid var(--line);
-    background: var(--line);
-}
-
-.hero-portrait::before,
-.hero-portrait::after {
-    content: "";
-    position: absolute;
-    width: 1.2rem;
-    height: 1.2rem;
-    border-color: var(--accent);
-    border-style: solid;
-    pointer-events: none;
-}
-
-.hero-portrait::before {
-    top: 0.7rem;
-    left: 0.7rem;
-    border-width: 2px 0 0 2px;
-}
-
-.hero-portrait::after {
-    right: 0.7rem;
-    bottom: 0.7rem;
-    border-width: 0 2px 2px 0;
-}
-
-.hero-portrait img {
-    width: 100%;
-    aspect-ratio: 1 / 1.12;
-    object-fit: cover;
-    object-position: center 20%;
-    filter: grayscale(1) contrast(1.08);
-}
-
-.hero-portrait figcaption {
+.hero-systems {
     display: grid;
-    gap: 0.35rem;
-    padding: 0.85rem;
+    grid-template-rows: auto 1fr auto;
+    min-height: 20rem;
+    border: 1px solid var(--line);
     background: var(--paper-bright);
-    border-top: 1px solid var(--line);
+}
+
+.systems-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.85rem;
+    border-bottom: 1px solid var(--line);
+    color: var(--accent-dark);
     font-size: 0.72rem;
+    font-weight: 600;
     text-transform: uppercase;
 }
 
-.hero-portrait figcaption strong {
+.systems-header strong {
+    color: var(--ink);
+}
+
+.systems-list {
+    display: grid;
+    margin: 0;
+}
+
+.systems-list div {
+    display: grid;
+    gap: 0.45rem;
+    padding: 1rem;
+    border-bottom: 1px solid var(--line-soft);
+}
+
+.systems-list dt {
+    color: var(--accent-dark);
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.systems-list dd {
+    margin: 0;
     color: var(--ink);
     font-family: var(--font-display);
-    font-size: 1rem;
-    line-height: 1.15;
-    text-transform: none;
+    font-size: 1.05rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.hero-systems pre {
+    margin: 0;
+    padding: 1rem;
+    overflow: hidden;
+    border-top: 1px solid var(--line);
+    background: var(--ink);
+    color: var(--paper-bright);
+    font-size: 0.74rem;
+    line-height: 1.55;
 }
 
 .focus-strip {
@@ -993,7 +1001,7 @@ p {
         padding-top: 1.25rem;
     }
 
-    .hero-portrait {
+    .hero-systems {
         grid-area: portrait;
     }
 
