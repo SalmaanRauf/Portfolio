@@ -40,6 +40,7 @@ Reference comps are stored outside the repo at:
 - Mobile-first: single column base, then 2-column at 40rem and full grid at 64rem.
 - Touch targets must remain at least 44px tall.
 - No page-level horizontal scroll.
+- On desktop, each major section must fit below the sticky header at normal browser zoom. Verify at roughly 2048x1120, 1440x1000, and a short 1366x768 viewport.
 - Do not scale type directly with viewport width. Use breakpoint-specific font sizes.
 - Check at desktop, tablet, mobile, and one awkward breakpoint before calling frontend work complete.
 

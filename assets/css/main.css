@@ -230,6 +230,7 @@ button {
     width: min(100%, var(--max-width));
     margin: 0 auto;
     padding: 4.5rem var(--gutter);
+    scroll-margin-top: 4.75rem;
 }
 
 .section {
@@ -940,7 +941,7 @@ p {
     }
 
     .artifact-strip img {
-        aspect-ratio: 1 / 0.72;
+        aspect-ratio: 16 / 7;
     }
 }
 
@@ -974,8 +975,8 @@ p {
 
     .section,
     .hero {
-        padding-top: 6.5rem;
-        padding-bottom: 6.5rem;
+        padding-top: 3.25rem;
+        padding-bottom: 3.25rem;
     }
 
     .hero {
@@ -984,13 +985,13 @@ p {
             "rail copy portrait"
             "rail strip strip";
         align-items: start;
-        min-height: 86svh;
-        padding-top: 5.25rem;
+        min-height: calc(100svh - 4.75rem);
+        padding-top: 3rem;
     }
 
     .hero-rail {
         grid-area: rail;
-        min-height: 36rem;
+        min-height: 31rem;
         writing-mode: vertical-rl;
         transform: rotate(180deg);
         justify-items: end;
@@ -1010,15 +1011,15 @@ p {
     }
 
     h1 {
-        font-size: 5.8rem;
+        font-size: 5.2rem;
     }
 
     h2 {
-        font-size: 4.1rem;
+        font-size: 3.35rem;
     }
 
     .hero-deck {
-        font-size: 1.3rem;
+        font-size: 1.16rem;
     }
 
     .profile-section {
@@ -1041,7 +1042,7 @@ p {
 
     .profile-section > .section-heading h2 {
         max-width: 9ch;
-        font-size: 3.2rem;
+        font-size: 2.75rem;
     }
 
     .profile-section > .profile-copy {
@@ -1055,7 +1056,18 @@ p {
 
     .capability-card-large {
         grid-column: span 2;
-        min-height: 20rem;
+        min-height: 14rem;
+    }
+
+    .capability-card {
+        min-height: 11.5rem;
+        padding: 0.9rem;
+    }
+
+    .capability-card-code pre {
+        margin-top: 0.75rem;
+        padding: 0.85rem;
+        font-size: 0.72rem;
     }
 
     .capability-card:nth-child(4) {
@@ -1069,16 +1081,64 @@ p {
     .role-row {
         grid-template-columns: 11rem minmax(14rem, 0.8fr) minmax(18rem, 1fr) minmax(12rem, 0.7fr);
         align-items: start;
-        padding: 1.15rem;
+        padding: 0.85rem 1rem;
     }
 
     .project-grid {
-        grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+        grid-template-columns: minmax(0, 1.18fr) minmax(19rem, 0.82fr);
+        grid-template-areas:
+            "featured side-one"
+            "featured side-two";
+        gap: 1px;
+        background: var(--line);
+    }
+
+    .project-card {
+        border: 0;
+    }
+
+    .project-card-featured {
+        grid-area: featured;
+    }
+
+    .project-card:nth-child(2) {
+        grid-area: side-one;
+    }
+
+    .project-card:nth-child(3) {
+        grid-area: side-two;
+    }
+
+    .project-card:not(.project-card-featured) {
+        grid-template-columns: minmax(9rem, 0.82fr) minmax(13rem, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .project-card:not(.project-card-featured) .project-body {
+        padding: 0.8rem;
+    }
+
+    .project-card:not(.project-card-featured) .project-media img {
+        height: 100%;
+        min-height: 13rem;
+        aspect-ratio: auto;
+    }
+
+    .project-body {
+        padding: 0.9rem;
+    }
+
+    .project-note {
+        margin-top: 0.75rem;
     }
 
     .contact-panel {
         grid-template-columns: minmax(0, 1fr) minmax(20rem, 0.62fr);
-        padding-top: 2rem;
+        padding-top: 0;
+    }
+
+    .artifact-strip {
+        margin-top: 1.5rem;
     }
 
     .site-footer {
@@ -1090,11 +1150,11 @@ p {
 
 @media (min-width: 80rem) {
     h1 {
-        font-size: 8.2rem;
+        font-size: 7rem;
     }
 
     h2 {
-        font-size: 5.8rem;
+        font-size: 4.75rem;
     }
 
     .hero {
@@ -1102,11 +1162,130 @@ p {
     }
 
     .hero-rail {
-        min-height: 41rem;
+        min-height: 34rem;
     }
 
     .profile-section > .section-heading h2 {
-        font-size: 4.25rem;
+        font-size: 3.65rem;
+    }
+}
+
+@media (min-width: 64rem) and (max-height: 850px) {
+    .section,
+    .hero {
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+    }
+
+    .hero {
+        min-height: calc(100svh - 4.75rem);
+        padding-top: 1.25rem;
+    }
+
+    .hero-rail {
+        min-height: 26rem;
+    }
+
+    h1 {
+        font-size: 4.45rem;
+    }
+
+    h2 {
+        font-size: 2.35rem;
+    }
+
+    .hero-deck,
+    .profile-copy p,
+    .contact-panel p {
+        font-size: 1rem;
+    }
+
+    .profile-section > .section-heading h2 {
+        font-size: 2.1rem;
+    }
+
+    .eyebrow,
+    .section-marker,
+    .section-marker-inline {
+        margin-bottom: 0.55rem;
+    }
+
+    .section-heading,
+    .section-heading-wide {
+        margin-bottom: 1rem;
+    }
+
+    .capability-card {
+        min-height: 8.6rem;
+        padding: 0.62rem;
+    }
+
+    .capability-card-large {
+        min-height: 9.8rem;
+    }
+
+    h3 {
+        font-size: 1.18rem;
+    }
+
+    .capability-card p,
+    .project-body p,
+    .role-row > p {
+        line-height: 1.32;
+    }
+
+    .tag-list,
+    .role-tags {
+        margin-top: 0.55rem;
+    }
+
+    .tag-list li,
+    .role-tags li {
+        padding: 0.28rem 0.4rem;
+    }
+
+    .capability-card-code pre {
+        max-height: 5.8rem;
+        margin-top: 0.5rem;
+        padding: 0.62rem;
+        font-size: 0.68rem;
+    }
+
+    .metrics-strip {
+        margin-bottom: 1rem;
+    }
+
+    .metrics-strip div {
+        min-height: 5.6rem;
+        padding: 0.7rem 1rem;
+    }
+
+    .metrics-strip strong {
+        font-size: 2.35rem;
+    }
+
+    .role-row {
+        padding: 0.65rem 0.85rem;
+    }
+
+    .project-card-featured .project-media img {
+        min-height: 15rem;
+    }
+
+    .project-card:not(.project-card-featured) .project-media img {
+        min-height: 9.4rem;
+    }
+
+    .contact-panel {
+        gap: 1.25rem;
+    }
+
+    .artifact-strip {
+        margin-top: 1rem;
+    }
+
+    .artifact-strip img {
+        aspect-ratio: 16 / 5.2;
     }
 }
 
